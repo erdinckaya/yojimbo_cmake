@@ -32,3 +32,6 @@ add_library(${PROJECT_NAME}
         tlsf/tlsf.c tlsf/tlsf.c)
 target_link_libraries(${PROJECT_NAME}
         ${MBEDTLS_LIBRARY} ${MBEDX509_LIBRARY} ${MBEDCRYPTO_LIBRARY} unofficial-sodium::sodium)
+
+set(YOJIMBO_LIBRARY ${PROJECT_NAME} CACHE STRING "" FORCE)
+mark_as_advanced(YOJIMBO_LIBRARY)
